@@ -1,0 +1,254 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-transaction1-from-user1-to-user2
+      author: yana_stepanova
+      changes:
+        - insert:
+            tableName: transactions
+            columns:
+              - column:
+                  name: account_from_id
+                  valueNumeric: 1
+              - column:
+                  name: account_to_id
+                  valueNumeric: 2
+              - column:
+                  name: amount
+                  valueNumeric: 1550.00
+              - column:
+                  name: currency_name
+                  value: 'UAH'
+              - column:
+                  name: transaction_date
+                  value: '2024-11-14 21:59:15'
+              - column:
+                  name: description
+                  value: 'payment for the course1'
+  - changeSet:
+      id: insert-transaction2-from-user1-to-user2
+      author: yana_stepanova
+      changes:
+        - insert:
+            tableName: transactions
+            columns:
+              - column:
+                  name: account_from_id
+                  valueNumeric: 1
+              - column:
+                  name: account_to_id
+                  valueNumeric: 2
+              - column:
+                  name: amount
+                  valueNumeric: 1650.00
+              - column:
+                  name: currency_name
+                  value: 'UAH'
+              - column:
+                  name: transaction_date
+                  value: '2024-11-19 11:04:01'
+              - column:
+                  name: description
+                  value: 'payment for the course2'
+  - changeSet:
+      id: insert-transaction3-from-user2-to-user1
+      author: yana_stepanova
+      changes:
+        - insert:
+            tableName: transactions
+            columns:
+              - column:
+                  name: account_from_id
+                  valueNumeric: 2
+              - column:
+                  name: account_to_id
+                  valueNumeric: 1
+              - column:
+                  name: amount
+                  valueNumeric: 550.00
+              - column:
+                  name: currency_name
+                  value: 'UAH'
+              - column:
+                  name: transaction_date
+                  value: '2024-11-21 15:17:45'
+              - column:
+                  name: description
+                  value: 'discount for the course2'
+  - changeSet:
+      id: insert-transaction4-from-user1-to-user1
+      author: yana_stepanova
+      changes:
+        - insert:
+            tableName: transactions
+            columns:
+              - column:
+                  name: account_from_id
+                  valueNumeric: 3
+              - column:
+                  name: account_to_id
+                  valueNumeric: 1
+              - column:
+                  name: amount
+                  valueNumeric: 2000.00
+              - column:
+                  name: currency_name
+                  value: 'UAH'
+              - column:
+                  name: transaction_date
+                  value: '2024-11-25 10:16:40'
+  - changeSet:
+      id: insert-transaction5-from-user1-to-user1
+      author: yana_stepanova
+      changes:
+        - insert:
+            tableName: transactions
+            columns:
+              - column:
+                  name: account_from_id
+                  valueNumeric: 3
+              - column:
+                  name: account_to_id
+                  valueNumeric: 1
+              - column:
+                  name: amount
+                  valueNumeric: 2000.00
+              - column:
+                  name: currency_name
+                  value: 'UAH'
+              - column:
+                  name: transaction_date
+                  value: '2024-12-02 09:00:05'
+  - changeSet:
+      id: insert-transaction6-from-user1-to-user1
+      author: yana_stepanova
+      changes:
+        - insert:
+            tableName: transactions
+            columns:
+              - column:
+                  name: account_from_id
+                  valueNumeric: 3
+              - column:
+                  name: account_to_id
+                  valueNumeric: 1
+              - column:
+                  name: amount
+                  valueNumeric: 2000.00
+              - column:
+                  name: currency_name
+                  value: 'UAH'
+              - column:
+                  name: transaction_date
+                  value: '2024-12-09 10:00:00'
+  - changeSet:
+      id: insert-transaction7-from-user1-to-user1
+      author: yana_stepanova
+      changes:
+        - insert:
+            tableName: transactions
+            columns:
+              - column:
+                  name: account_from_id
+                  valueNumeric: 3
+              - column:
+                  name: account_to_id
+                  valueNumeric: 1
+              - column:
+                  name: amount
+                  valueNumeric: 2000.00
+              - column:
+                  name: currency_name
+                  value: 'UAH'
+              - column:
+                  name: transaction_date
+                  value: '2024-12-16 10:00:10'
+  - changeSet:
+      id: insert-transaction8-from-user1-to-user1
+      author: yana_stepanova
+      changes:
+        - insert:
+            tableName: transactions
+            columns:
+              - column:
+                  name: account_from_id
+                  valueNumeric: 3
+              - column:
+                  name: account_to_id
+                  valueNumeric: 1
+              - column:
+                  name: amount
+                  valueNumeric: 2000.00
+              - column:
+                  name: currency_name
+                  value: 'UAH'
+              - column:
+                  name: transaction_date
+                  value: '2024-12-23 10:01:09'
+  - changeSet:
+      id: insert-transaction9-from-user1-to-user1
+      author: yana_stepanova
+      changes:
+        - insert:
+            tableName: transactions
+            columns:
+              - column:
+                  name: account_from_id
+                  valueNumeric: 3
+              - column:
+                  name: account_to_id
+                  valueNumeric: 1
+              - column:
+                  name: amount
+                  valueNumeric: 2000.00
+              - column:
+                  name: currency_name
+                  value: 'UAH'
+              - column:
+                  name: transaction_date
+                  value: '2024-12-30 10:00:09'
+  - changeSet:
+      id: insert-transaction10-from-user1-to-user1
+      author: yana_stepanova
+      changes:
+        - insert:
+            tableName: transactions
+            columns:
+              - column:
+                  name: account_from_id
+                  valueNumeric: 3
+              - column:
+                  name: account_to_id
+                  valueNumeric: 1
+              - column:
+                  name: amount
+                  valueNumeric: 2000.00
+              - column:
+                  name: currency_name
+                  value: 'UAH'
+              - column:
+                  name: transaction_date
+                  value: '2025-01-06 10:00:09'
+  - changeSet:
+      id: insert-transaction11-from-user1-to-user1
+      author: yana_stepanova
+      changes:
+        - insert:
+            tableName: transactions
+            columns:
+              - column:
+                  name: account_from_id
+                  valueNumeric: 3
+              - column:
+                  name: account_to_id
+                  valueNumeric: 1
+              - column:
+                  name: amount
+                  valueNumeric: 2000.00
+              - column:
+                  name: currency_name
+                  value: 'UAH'
+              - column:
+                  name: transaction_date
+                  value: '2025-01-13 10:00:09'
+
+

@@ -1,0 +1,31 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-admin-role
+      author: yana_stepanova
+      changes:
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: name
+                  value: 'ADMIN'
+  - changeSet:
+      id: insert-manager-role
+      author: yana_stepanova
+      changes:
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: name
+                  value: 'MANAGER'
+  - changeSet:
+      id: insert-client-role
+      author: yana_stepanova
+      changes:
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: name
+                  value: 'CLIENT'

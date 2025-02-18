@@ -1,0 +1,58 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-accountUA-for-user1
+      author: yana_stepanova
+      changes:
+        - insert:
+            tableName: accounts
+            columns:
+              - column:
+                  name: iban
+                  value: 'UA121234560000020002011234567'
+              - column:
+                  name: user_id
+                  valueNumeric: 2
+              - column:
+                  name: balance
+                  valueNumeric: 975.96
+              - column:
+                  name: currency_name
+                  value: 'UAH'
+  - changeSet:
+      id: insert-accountUA-for-user2
+      author: yana_stepanova
+      changes:
+        - insert:
+            tableName: accounts
+            columns:
+              - column:
+                  name: iban
+                  value: 'UA121234560000030003017654321'
+              - column:
+                  name: user_id
+                  valueNumeric: 3
+              - column:
+                  name: balance
+                  valueNumeric: 30000.29
+              - column:
+                  name: currency_name
+                  value: 'UAH'
+  - changeSet:
+      id: insert-accountUA2-for-user1
+      author: yana_stepanova
+      changes:
+        - insert:
+            tableName: accounts
+            columns:
+              - column:
+                  name: iban
+                  value: 'UA121234560000020002021234567'
+              - column:
+                  name: user_id
+                  valueNumeric: 2
+              - column:
+                  name: balance
+                  valueNumeric: 50000.00
+              - column:
+                  name: currency_name
+                  value: 'UAH'

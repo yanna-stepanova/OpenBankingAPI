@@ -1,0 +1,43 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-table-payments
+      author: yana_stepanova
+      changes:
+        - createTable:
+            tableName: payments
+            columns:
+              - column:
+                  name: id
+                  type: bigserial
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: transaction_id
+                  type: bigserial
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_payments_transactions
+                    referencedTableName: transactions
+                    referencedColumnNames: id
+              - column:
+                  name: amount
+                  type: decimal(15, 2)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: currency_name
+                  type: varchar(3)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: status
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created_at
+                  type: timestamp(6)
+                  constraints:
+                    nullable: false

@@ -1,0 +1,45 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-transaction1-to-payments
+      author: yana_stepanova
+      changes:
+        - insert:
+            tableName: payments
+            columns:
+              - column:
+                  name: transaction_id
+                  valueNumeric: 1
+              - column:
+                  name: amount
+                  valueNumeric: 1550.00
+              - column:
+                  name: currency_name
+                  value: 'UAH'
+              - column:
+                  name: status
+                  value: 'PAID'
+              - column:
+                  name: created_at
+                  value: '2024-11-14 22:59:15'
+  - changeSet:
+      id: insert-transaction2-to-payments
+      author: yana_stepanova
+      changes:
+        - insert:
+            tableName: payments
+            columns:
+              - column:
+                  name: transaction_id
+                  valueNumeric: 2
+              - column:
+                  name: amount
+                  valueNumeric: 1650.00
+              - column:
+                  name: currency_name
+                  value: 'UAH'
+              - column:
+                  name: status
+                  value: 'PAID'
+              - column:
+                  name: created_at
+                  value: '2024-11-19 11:14:01'

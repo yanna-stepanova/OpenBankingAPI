@@ -1,0 +1,67 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-admin-into-users
+      author: yana_stepanova
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: email
+                  value: 'admin@example.com'
+              - column:
+                  name: first_name
+                  value: 'Current admin'
+              - column:
+                  name: last_name
+                  value: 'Default admin'
+              - column:
+                  name: password
+                  value: 'current_admin'
+              - column:
+                  name: role_id
+                  valueNumeric: 1
+  - changeSet:
+      id: insert-client1-into-users
+      author: yana_stepanova
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: email
+                  value: 'user1@example.com'
+              - column:
+                  name: first_name
+                  value: 'First'
+              - column:
+                  name: last_name
+                  value: 'Client'
+              - column:
+                  name: password
+                  value: 'user1234'
+              - column:
+                  name: role_id
+                  valueNumeric: 3
+  - changeSet:
+      id: insert-client2-into-users
+      author: yana_stepanova
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: email
+                  value: 'user2@example.com'
+              - column:
+                  name: first_name
+                  value: 'Second'
+              - column:
+                  name: last_name
+                  value: 'Client'
+              - column:
+                  name: password
+                  value: 'user1234'
+              - column:
+                  name: role_id
+                  valueNumeric: 3
