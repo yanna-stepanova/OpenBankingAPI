@@ -2,7 +2,6 @@ package com.yana.stepanova.service.impl;
 
 import com.yana.stepanova.dto.user.UserRegistrationRequestDto;
 import com.yana.stepanova.dto.user.UserResponseDto;
-import com.yana.stepanova.dto.user.UserRoleRequestDto;
 import com.yana.stepanova.exception.EntityNotFoundCustomException;
 import com.yana.stepanova.exception.RegistrationException;
 import com.yana.stepanova.mapper.UserMapper;
@@ -37,16 +36,6 @@ public class UserServiceImpl implements UserService {
             user.setRole(getRoleByName(Role.RoleName.CLIENT.getRoleName()));
         }
         return userMapper.toResponseDto(userRepo.save(user));
-    }
-
-    @Override
-    public UserResponseDto getUserDetail(Long id) {
-        return userMapper.toResponseDto(getUserById(id));
-    }
-
-    private User getUserById(Long id) {
-        return userRepo.findById(id).orElseThrow(() -> new EntityNotFoundCustomException(
-                String.format("Can't find user by id = %s in table users", id)));
     }
 
     private Role getRoleByName(String roleName) {

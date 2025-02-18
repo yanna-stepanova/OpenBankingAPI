@@ -10,12 +10,10 @@ import com.yana.stepanova.model.Account;
 import com.yana.stepanova.repository.AccountRepository;
 import com.yana.stepanova.repository.TransactionRepository;
 import com.yana.stepanova.service.AccountService;
-import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Pageable;
-import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Random;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 @RequiredArgsConstructor
 @Service
@@ -25,28 +23,6 @@ public class AccountServiceImpl implements AccountService {
     private final AccountMapper accountMapper;
     private final TransactionRepository transactionRepo;
     private final TransactionMapper transactionMapper;
-
-   /*
-
-
-    public void initiatePayment(Payment payment) {
-        Account account = accountRepo.findById(payment.getAccountId())
-            .orElseThrow(() -> new RuntimeException("Account not found"));
-
-        // Створюємо нову транзакцію
-        Transaction transaction = new Transaction();
-        transaction.setAccount(account);
-        transaction.setAmount(payment.getAmount());
-        transaction.setDescription("Payment to " + payment.getRecipient());
-        transaction.setDate(LocalDateTime.now());
-
-        // Зменшуємо баланс акаунту
-        account.setBalance(account.getBalance() - payment.getAmount());
-
-        // Зберігаємо транзакцію та оновлюємо акаунт
-        transactionRepository.save(transaction);
-        accountRepository.save(account);
-    }*/
 
     @Override
     public AccountDto getAccountBalance(String accountId) {
