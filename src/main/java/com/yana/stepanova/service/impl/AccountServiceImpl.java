@@ -10,6 +10,8 @@ import com.yana.stepanova.model.Account;
 import com.yana.stepanova.repository.AccountRepository;
 import com.yana.stepanova.repository.TransactionRepository;
 import com.yana.stepanova.service.AccountService;
+
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Random;
 import lombok.RequiredArgsConstructor;
@@ -25,12 +27,9 @@ public class AccountServiceImpl implements AccountService {
     private final TransactionMapper transactionMapper;
 
     @Override
-    public AccountDto getAccountBalance(String accountId) {
-        return accountRepo.findByIban(accountId)
-                .map(accountMapper::toDto)
-                .orElseThrow(() -> new EntityNotFoundCustomException(
-                        String.format("Account with IBAN %s not found", accountId)
-                ));
+    public BigDecimal getAccountBalance(String accountId) {
+        return accountRepo.findByIban(accountId).orElseThrow(() -> new EntityNotFoundCustomException(
+                String.format("Account with IBAN %s not found", accountId))).getBalance();
     }
 
     @Override
