@@ -129,7 +129,6 @@
 							<groupId>org.mapstruct</groupId>
 							<artifactId>mapstruct-processor</artifactId>
 							<version>${mapstruct.version}</version>
-							<scope>provided</scope>
 						</path>
 						<path>
 							<groupId>org.projectlombok</groupId>
