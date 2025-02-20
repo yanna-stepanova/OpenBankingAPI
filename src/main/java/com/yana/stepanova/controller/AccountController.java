@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @Tag(name = "Account manager", description = "Endpoints for managing accounts")
@@ -39,7 +40,7 @@ public class AccountController {
             description = "Returns the current account balance: accountId is IBAN")
     @PreAuthorize("hasAuthority('ADMIN') or hasAuthority('MANAGER')")
     @GetMapping("/{accountId}/balance")
-    public AccountDto getAccountBalance(@PathVariable String accountId) {
+    public BigDecimal getAccountBalance(@PathVariable String accountId) {
         return accountService.getAccountBalance(accountId);
     }
 

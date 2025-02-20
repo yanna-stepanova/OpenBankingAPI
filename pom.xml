@@ -33,6 +33,7 @@
 		<mapstruct.version>1.6.3</mapstruct.version>
 		<swagger.version>2.8.5</swagger.version>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -115,7 +116,6 @@
 			<version>${swagger.version}</version>
 		</dependency>
 	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -129,7 +129,6 @@
 							<groupId>org.mapstruct</groupId>
 							<artifactId>mapstruct-processor</artifactId>
 							<version>${mapstruct.version}</version>
-							<scope>provided</scope>
 						</path>
 						<path>
 							<groupId>org.projectlombok</groupId>
